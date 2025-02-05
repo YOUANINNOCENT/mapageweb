@@ -1,0 +1,70 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background:linear-gradient(to right, #4facfe,#00f2fe );
+    color: white;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: 10px;
+    scroll-behavior: smooth;
+}
+
+header{
+    background: rgba(0, 0,0 , 0.8);
+    padding: 20pix;
+    font-size:24px ;
+}
+section{
+    margin: 50px  auto;
+    padding: 30px;
+    background: rgba(255,255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow:  0 0 20px  rgba(0,0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s, background 0.3s;
+}
+section hover {
+    fransform:scale(1.05);
+    background:rgba(255 , 255, 255,0.4);
+}
+.profile-pic{
+    width: 180px;
+    height: 180px;
+    border-radius: 20%;
+    border: 3px solid white;
+    margin-bottom: 15px;
+}
+button {
+
+padding: 12px  24px; background-color: #ff4081;
+color: white;
+font-size: 18px;
+border: none;
+cursor: pointer;
+border-radius: 25px;
+margin-top: 20px;
+transition: backgroung 0.3s, transform 0.2s;
+}
+button:hover{
+    background: #ff80ab;
+    transform:  scale(1.1);
+}
+#message{
+    font-size: 18px;
+    margin-top: 10px;
+}
+.fade-in{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, trnsform 1s ease-out ;
+}
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+footer{
+    margin-top: 50px;
+    padding: 15px;
+    background:rgba(0, 0,0 , 0.7);
+} 
