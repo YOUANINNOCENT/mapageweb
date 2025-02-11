@@ -1,70 +1,244 @@
-body{
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background:linear-gradient(to right, #4facfe,#00f2fe );
-    color: white;
-    margin: 0;
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Protest+Guerrilla&display=swap');
+</style>
+
+*{
     padding: 0;
-    scrollbar-width: 10px;
-    scroll-behavior: smooth;
-}
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+ }
 
-header{
-    background: rgba(0, 0,0 , 0.8);
-    padding: 20pix;
-    font-size:24px ;
-}
-section{
-    margin: 50px  auto;
-    padding: 30px;
-    background: rgba(255,255, 255, 0.2);
-    border-radius: 15px;
-    box-shadow:  0 0 20px  rgba(0,0, 0, 0.3);
-    width: 80%;
-    max-width: 600px;
-    transition: transform 0.3s, background 0.3s;
-}
-section hover {
-    transform:scale(1.05);
-    background:rgba(255 , 255, 255,0.4);
-}
-.profile-pic{
-    width: 180px;
-    height: 180px;
-    border-radius: 20%;
-    border: 3px solid white;
-    margin-bottom: 15px;
-}
-button {
+ body
+ {
+    font-family: 'inter',sans-serif;''
+ }
 
-padding: 12px  24px; background-color: #ff4081;
-color: white;
-font-size: 18px;
-border: none;
-cursor: pointer;
-border-radius: 25px;
-margin-top: 20px;
-transition: backgroung 0.3s, transform 0.2s;
-}
-button:hover{
-    background: #ff80ab;
-    transform:  scale(1.1);
-}
-#message{
+ .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 12%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+ }
+ .logo{
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+    text-decoration: none;
+ }
+ .logo:hover{
+    color: orangered;
+    text-shadow: 0 0 25px orangered,
+                 0 0 50px orangered;
+    transform: scale(1.1);
+ }
+ .span{
+    color: orangered;
+ }
+ .navbar a{
     font-size: 18px;
-    margin-top: 10px;
+    color: white;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+ }
+ .navbar a:hover,
+ .navbar a.active{
+    color: orangered;
+    border-bottom: 3px solid orangered;
+ }
+.contact{
+    padding: 10px 28px;
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
-.fade-in{
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease-out, trnsform 1s ease-out ;
+.contact:hover{
+    background-color: orangered;
+    box-shadow: 0 0 25px orangered;
+    color: white;
 }
-.show{
-    opacity: 1;
-    transform: translateY(0);
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(241,241,241);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
 }
-footer{
-    margin-top: 50px;
-    padding: 15px;
-    background:rgba(0, 0,0 , 0.7);
-} 
+.home-content{
+    max-width: 800px;
+}
+.home-content h3{
+    font-size: 42px;
+
+}
+.home-content h1{
+    font-size: 62px;
+    line-height: 1.2;
+}
+.home-content p{
+    font-size: 18px;
+    margin: 25px 0 30px;
+}
+.btn-box{
+    width: 345px;
+    display: flex;
+    gap: 2em;
+}
+.btn-1{
+    padding: 15px 28px;
+    background-color: black;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-1:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}
+.btn-2{
+    padding: 15px 28px;
+    background-color: orangered;
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.btn-2:hover{
+    background-color: white;
+    color: orangered;
+}
+.img-box img{
+    border-radius: 50%;
+    width: 550px;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: orangered;
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+    width: 50px;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: black;
+}
+.footer.social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer.social a{
+    font-size: 24px;
+    color: white;
+    border: 2px sold orangered;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px orangered, 0 0 10px orangered;*
+    transition: 0.3s ease;
+}
+.footer.social a:hover{
+    transform: scale(1.2)translateY(-10px);
+    color: orangered;
+    border: 2px solid orangered;
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+
+}
+.footer ul li a:hover{
+    border-bottom: 3px solid orangered;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyringht{
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+/* Conteneur centré */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du bouton */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Style du message */
+.message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
